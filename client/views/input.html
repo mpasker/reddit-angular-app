@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>Welcome to the Reddit API, {{getCurrentUser}}. Please enter the subreddit you would like to view or see default subreddits below.</h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1 enterSub">/r/</span>
+                    <input type="text" class="form-control" placeholder="subreddit" aria-describedby="basic-addon1" ng-model='subreddit'>
+            </div>
+        </div>
+        <div class="btn-group col-lg-4">
+            <button class="btn btn-primary" type="button" id="navToSub">Go!</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class='listOfSubreddits' ng-repeat='sub in subs'>
+                <a ng-href="#{{sub.url}}"><h4>{{sub.display_name}}</h4></a>
+                <span>{{sub.public_description}}</span>
+                <br>
+                <span># of subscribers: {{sub.subscribers}}</span>
+                <br><br>
+                <span>{{sub.url}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
