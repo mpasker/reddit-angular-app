@@ -26,9 +26,13 @@ c.controller('InputController', ['$scope', '$location', 'DefaultSubreddits',
 c.controller('SubredditController', ['$scope', 'ViewSubreddit', '$routeParams', '$location',
     function($scope, ViewSubreddit, $routeParams, $location){
         var subredditId = $routeParams.id;
+        //get subreddit from resourse
+        //id is set to routeParam
         $scope.subreddit = ViewSubreddit.get({id:subredditId}, function(response){
+            //scope posts to empty array
             $scope.posts = [];
             console.log($scope.posts);
+            //loop response from get request and push information into posts array
             var dataset = response.data.children;
             for(var i = 0; i < dataset.length; i++){
                 $scope.posts.push(dataset[i].data);

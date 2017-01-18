@@ -1,11 +1,9 @@
 <div class="container">
-    <div class="row">
-        <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1 userName"></span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model='username'>
-            <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button" ng-click='setUser()'>Go!</button>
-            </span>
-        </div>
+    <div class="form-group">
+        <label for="usr">Username:</label>
+        <input type="text" placeholder="Username" class="form-control" aria-describedby="basic-addon1" ng-model='username'>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg" ng-click="setUser()">Go!</button>
     </div>
 </div>

@@ -19,8 +19,11 @@
     padding: 4px;
 }
 .fa-arrow-up {
-    color: darkorange;
+    color: #FF5700;
 }
 .fa-gg-circle {
-    color: goldenrod;
+    color: #DEBE22;
+}
+.fa-reddit {
+    color: #FF5700;
 }
