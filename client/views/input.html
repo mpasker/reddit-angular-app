@@ -10,11 +10,11 @@
         <div class="col-lg-8">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1 enterSub">/r/</span>
-                    <input type="text" class="form-control" placeholder="subreddit" aria-describedby="basic-addon1" ng-model='subreddit'>
+                    <input type="text" class="form-control" placeholder="subreddit" aria-describedby="basic-addon1" ng-model="singleSub">
             </div>
         </div>
         <div class="btn-group col-lg-4">
-            <button class="btn btn-primary" type="button" id="navToSub">Go!</button>
+            <button class="btn btn-primary" type="button" id="navToSub" ng-click="enterSub()">Go!</button>
         </div>
     </div>
 </div>

@@ -9,8 +9,20 @@ c.controller('WelcomeController', ['$scope', '$rootScope', '$location',
         }
     }]);
 
-c.controller('InputController', ['$scope', '$location', 'DefaultSubreddits',
-    function($scope, $location, DefaultSubreddits){
+c.controller('InputController', ['$scope', '$location', '$routeParams', 'DefaultSubreddits',
+    function($scope, $location, $routeParams, DefaultSubreddits){
+        var subredditId = $routeParams.id;
+        //execute function on button click for subreddit input.
+        $scope.enterSub = function() {
+            //singleSub value grabbed from input model.
+            $scope.singleSub;
+            //set the routeParam to value from input model.
+            subredditId = $scope.singleSub;
+            console.log(subredditId);
+            //navigate to routeParam where SubredditController will be executed
+            $location.path('r/' + subredditId);
+        };
+        
         $scope.posts = DefaultSubreddits.get(function(response){
             $scope.subs = [];
             console.log($scope.subs);
