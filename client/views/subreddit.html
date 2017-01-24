@@ -5,17 +5,24 @@
             <div id="subInfo">
                 <h2>/r/{{posts[0].subreddit}} front page</h2>
             </div>
-            <div class="listOfPosts" ng-repeat="post in posts | limitTo: 25">
+        </div>
+    </div>
+    <div class=" listOfPosts row" ng-repeat="post in posts">
+            <div class="col-md-12">
                 <a href={{post.url}}><h4>{{post.title}}</h4></a>
-                <ul class="postDetail">
-                    <li><i class="fa fa-user-circle" aria-hidden="true"></i> {{post.author}}</li>
-                    <li><i class="fa fa-arrow-up" aria-hidden="true"></i> {{post.ups}}</li>
-                    <li><i class="fa fa-gg-circle" aria-hidden="true"></i> {{post.gilded}}</li>
-                    <a ng-href="https://reddit.com{{post.permalink}}">
-                        <li><i class="fa fa-comments" aria-hidden="true"></i>{{post.num_comments}}</li>
-                    </a>
-                    <li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;<strong>nsfw?</strong> {{post.over_18}}</li>
-                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="postDetail">
+                        <li><i class="fa fa-user-circle" aria-hidden="true"></i> {{post.author}}</li>
+                        <li><i class="fa fa-arrow-up" aria-hidden="true"></i> {{post.ups}}</li>
+                        <li><i class="fa fa-gg-circle" aria-hidden="true"></i> {{post.gilded}}</li>
+                        <a ng-href="https://reddit.com{{post.permalink}}">
+                            <li><i class="fa fa-comments" aria-hidden="true"></i>{{post.num_comments}}</li>
+                        </a>
+                        <li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;<strong>nsfw?</strong> {{post.over_18}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
